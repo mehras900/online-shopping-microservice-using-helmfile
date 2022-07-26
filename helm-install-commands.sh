@@ -1,0 +1,11 @@
+helm install -f helm-values/email-service-values.yaml emailservice helm-charts/helm-microservice
+helm install -f helm-values/payment-service-values.yaml paymentservice helm-charts/helm-microservice
+helm install -f helm-values/shipping-service-values.yaml shippingservice helm-charts/helm-microservice
+helm install -f helm-values/currency-service-values.yaml currencyservice helm-charts/helm-microservice
+helm install -f helm-values/recommendation-service-values.yaml recommendationservice  helm-charts/helm-microservice
+helm install -f helm-values/rediscart-service-values.yaml rediscartservice  helm-charts/redis
+helm install -f helm-values/productcatalog-service-values.yaml productcatalogservice  helm-charts/helm-microservice
+helm install -f helm-values/cart-service-values.yaml cartservice  helm-charts/helm-microservice
+helm install -f helm-values/checkout-service-values.yaml checkoutservice  helm-charts/helm-microservice
+helm install -f helm-values/frontend-service-values.yaml frontendservice  helm-charts/helm-microservice
+helm install -f helm-values/adservice-service-values.yaml adservice  helm-charts/helm-microservice

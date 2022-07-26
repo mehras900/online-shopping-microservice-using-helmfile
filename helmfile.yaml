@@ -1,0 +1,58 @@
+releases:
+  - name: emailservice
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/email-service-values.yaml
+
+  - name: paymentservice
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/payment-service-values.yaml
+
+  - name: shippingservice
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/shipping-service-values.yaml
+
+  - name: currencyservice
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/currency-service-values.yaml
+
+  - name: productcatalogservice
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/productcatalog-service-values.yaml
+
+  - name: recommendationservice
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/recommendation-service-values.yaml
+
+  - name: redis-cart
+    chart: ./helm-charts/redis
+    values:
+      - ./helm-values/rediscart-service-values.yaml
+      - appReplicas: 1
+      - volumeName: "redis-cart-data"
+
+  - name: adservice
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/adservice-service-values.yaml
+
+  - name: checkoutservice
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/checkout-service-values.yaml
+
+  - name: frontend
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/frontend-service-values.yaml
+
+  - name: cartservice
+    chart: ./helm-charts/helm-microservice
+    values:
+      - ./helm-values/cart-service-values.yaml
+
